@@ -30,15 +30,15 @@ Entre las tecnologías que manejo, destacan:
 ![preview](captura.png)
 
 
-## 🔗 Demo en vivo
+## 🔗 Ver en vivo
 
-[👉 Ver Portafolio en línea](https://www.linkedin.com/in/sebastian-arce29/)  
+[👉 Ver Portafolio en línea](https://sarce22.github.io/Portafolio-Web/)  
 
 
 
 ## 📬 Contacto
 
-- Email: [sebastianarce@email.com](mailto:sebastianarce482@gmail.com)
+- Email: [sebastianarce482@gmail.com](mailto:sebastianarce482@gmail.com)
 - LinkedIn: [linkedin.com/in/sebastian-arce29](https://www.linkedin.com/in/sebastian-arce29/)
 - GitHub: [github.com/sarce22](https://github.com/sarce22)
 
