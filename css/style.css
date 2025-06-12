@@ -1,0 +1,619 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f8f9fa;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+
+
+/* Sidebar styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    padding: 2rem;
+    height: 11rem;
+}
+
+.sidebar-header h2 {
+    color: black;
+    font-size: 1.5rem;
+    padding-top: 2rem;
+
+}
+
+.sidebar-nav {
+    padding: 1rem 0;
+
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    color: #666;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    color: #4f46e5;
+    background: #f8f9ff;
+}
+
+.nav-item svg {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+/* Mobile menu button */
+.mobile-menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 100;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+/* Main content styles */
+.main-content {
+    transition: transform 0.3s ease;
+}
+
+.main-content.shifted {
+    transform: translateX(250px);
+}
+
+/* Header styles */
+header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    height: 12rem;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.icon {
+    color: #666;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.icon:hover {
+    color: #4f46e5;
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* Hero section */
+.hero {
+    text-align: center;
+    padding: 4rem 0;
+    background: white;
+    border-radius: 1rem;
+    margin: 2rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    max-width: 800px;
+    margin: 0 auto;
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* Technologies section */
+.technologies {
+    margin: 4rem 0;
+}
+
+.technologies h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.tech-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.tech-card h3 {
+    margin-top: 1rem;
+    color: #1a1a1a;
+    font-size: 1.2rem;
+}
+
+.tech-card img {
+    width: 60px;
+    /* tamaño fijo y uniforme */
+    height: 60px;
+    object-fit: contain;
+
+}
+
+/* Icon colors */
+.red {
+    color: #ef4444;
+}
+
+.blue {
+    color: #3b82f6;
+}
+
+.yellow {
+    color: #f59e0b;
+}
+
+.green {
+    color: #10b981;
+}
+
+.purple {
+    color: #8b5cf6;
+}
+
+.gray {
+    color: #6b7280;
+}
+
+/* Language section */
+.language {
+    text-align: center;
+    margin: 4rem 0;
+}
+
+.language-card {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: white;
+    border-radius: 1rem;
+    padding: 2rem 3rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.language-card img {
+    width: 60px;
+    /* tamaño fijo y uniforme */
+    height: 60px;
+    object-fit: contain;
+}
+
+img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.language-card svg {
+    color: #3b82f6;
+}
+
+.language-card div {
+    text-align: left;
+}
+
+.language-card h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.5rem;
+}
+
+.language-card p {
+    color: #666;
+}
+
+/* Footer styles */
+footer {
+    background: white;
+
+    padding: 2rem 0;
+    margin-top: 4rem;
+}
+
+footer .container {
+    text-align: center;
+}
+
+footer .social-links {
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #666;
+}
+
+/* Responsive styles */
+@media (min-width: 1024px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .language-card {
+        padding: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .language-card div {
+
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .tech-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar (ya lo tienes, solo confirmamos estructura y clase correcta) */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px;
+    background: white;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+/* Botón de menú móvil */
+.mobile-menu-btn {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1100;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    font-size: 1.5rem;
+    color: #4f46e5;
+    transition: background 0.3s ease;
+}
+
+.mobile-menu-btn:hover {
+    background: #f0f0ff;
+}
+
+/* Mostrar menú fijo en pantallas grandes */
+@media (min-width: 1024px) {
+    .sidebar {
+        transform: translateX(0);
+    }
+
+    .main-content {
+        margin-left: 250px;
+    }
+
+    .mobile-menu-btn {
+        display: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .mobile-menu-btn {
+        display: flex;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/*Modo oscuro */
+
+
+/* === VARIABLES (opcional, muy recomendado) === */
+:root {
+    --bg-main: #f8f9fa;
+    --text-main: #333;
+    --card-bg: white;
+    --accent: #4f46e5;
+    --hover-bg: #f8f9ff;
+    --text-secondary: #666;
+    --icon-color: #666;
+}
+
+body.dark-mode {
+    --bg-main: #1a1a1a;
+    --text-main: #f5f5f5;
+    --card-bg: #242424;
+    --accent: #90cdf4;
+    --hover-bg: #333;
+    --text-secondary: #ccc;
+    --icon-color: #ccc;
+}
+
+/* === APLICACIÓN DE VARIABLES === */
+body {
+    background: var(--bg-main);
+    color: var(--text-main);
+}
+
+.sidebar,
+.hero,
+.tech-card,
+.language-card,
+footer,
+header {
+    background: var(--card-bg);
+    color: var(--text-main);
+}
+
+.nav-item {
+    color: var(--text-secondary);
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background: var(--hover-bg);
+    color: var(--accent);
+}
+
+.sidebar-header h2,
+.hero h1,
+.tech-card h3,
+.technologies h2,
+.language-card h3 {
+    color: var(--text-main);
+}
+
+.hero p,
+.language-card p,
+footer p,
+.icon {
+    color: var(--text-secondary);
+}
+
+.icon:hover {
+    color: var(--accent);
+}
+
+a {
+    color: var(--accent);
+}
+
+/* === BOTÓN DE CAMBIO DE TEMA === */
+.theme-toggle-btn {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1100;
+    background-color: var(--card-bg);
+    color: var(--text-main);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* === BOTÓN MENÚ MÓVIL === */
+.mobile-menu-btn {
+    background: var(--card-bg);
+    color: var(--accent);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .mobile-menu-btn {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* === AJUSTES EXTRA PARA MODO OSCURO DIRECTAMENTE (si no usas variables) === */
+body.dark-mode .sidebar,
+body.dark-mode header,
+body.dark-mode .hero,
+body.dark-mode .tech-card,
+body.dark-mode .language-card,
+body.dark-mode footer {
+    background-color: #242424;
+    color: #f5f5f5;
+}
+
+body.dark-mode .sidebar-header h2,
+body.dark-mode .hero h1,
+body.dark-mode .tech-card h3,
+body.dark-mode .language-card h3,
+body.dark-mode .technologies h2 {
+    color: #f5f5f5;
+}
+
+body.dark-mode .hero p,
+body.dark-mode .language-card p,
+body.dark-mode footer p,
+body.dark-mode .icon {
+    color: #ccc;
+}
+
+body.dark-mode .icon:hover {
+    color: #90cdf4;
+}
+
+body.dark-mode a {
+    color: #90cdf4;
+}
+
+body.dark-mode .nav-item {
+    color: #f5f5f5;
+}
+
+body.dark-mode .nav-item:hover,
+body.dark-mode .nav-item.active {
+    background-color: #333;
+    color: #90cdf4;
+}
+
+body.dark-mode .theme-toggle-btn {
+    background-color: #333;
+    color: #f5f5f5;
+}
+
+
+.cv-button {
+  display: inline-block;
+  background-color: white;
+  color: black;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s;
+  border: 2px solid black;
+}
+
+.cv-button:hover {
+  
+  transform: scale(1.05);
+}
+
+/* Modo oscuro */
+body.dark-mode .cv-button {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+body.dark-mode .cv-button:hover {
+  background-color: #1a1a1a;
+}
+

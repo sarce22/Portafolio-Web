@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portafolio - Sebastian Arce</title>
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+
+<body>
+    <!-- Sidebar -->
+    <button class="mobile-menu-btn" id="toggleSidebar">
+        ☰
+    </button>
+
+
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>Portafolio</h2>
+        </div>
+        <nav class="sidebar-nav">
+            <a href="#home" class="nav-item">Inicio</a>
+            <a href="#about" class="nav-item">Sobre mí</a>
+            <a href="#technologies" class="nav-item">Tecnologías</a>
+            <a href="#languages" class="nav-item">Idiomas</a>
+        </nav>
+    </aside>
+
+
+
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Header -->
+        <header>
+            <nav class="container">
+                <div class="container-h1">
+                    <h1>Sebastian Arce - Desarrollador de Software</h1>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/sarce22" target="_blank">
+                        <img src="img/github.png" alt="GitHub" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/sebastian-arce29/" target="_blank">
+                        <img src="img/linkedin.png" alt="LinkedIn" />
+                    </a>
+                    <button id="toggleTheme" class="theme-toggle-btn" title="Cambiar tema">🌙</button>
+                </div>
+            </nav>
+        </header>
+
+
+
+        <!-- Main Content -->
+        <main class="container">
+            <!-- Hero Section -->
+            <section id="home" class="hero">
+                <h1>Sobre mi</h1>
+                <p>
+                    Estudiante de Ingeniería de Software (ultimo semestre). Amplios conocimientos en tecnologías para
+                    entornos web,
+                    desarrollo de aplicaciones y gestión de bases de datos. Soy una persona seria,
+                    comprometida y responsable, con habilidades sólidas de comunicación y un nivel alto de inglés
+                    (Certificado C1).
+                    Me apasiona aprender y asumir nuevos desafíos que me permitan seguir creciendo profesionalmente.
+                </p>
+                <br>
+                <a href="cv_sebastian.txt" download class="cv-button">
+                    Descargar CV
+                </a>
+            </section>
+
+
+
+            <!-- Technologies Section -->
+            <section id="technologies" class="technologies">
+                <h2>Tecnologías</h2>
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <img src="img/java.png" alt="">
+                        <h3>Java</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/html-5.png" alt="">
+                        <h3>HTML</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/mysql.png" alt="">
+                        <h3>MySQL</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/github.png" alt="">
+                        <h3>Git</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/docker2.png" alt="">
+                        <h3>Docker</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/css-3.png" alt="">
+                        <h3>CSS</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/angular.png" alt="">
+                        <h3>Angular</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/mongo.png" alt="">
+                        <h3>MongoDB</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/python.png" alt="">
+                        <h3>Python</h3>
+                    </div>
+                    <div class="tech-card">
+                        <img src="img/linux.png" alt="">
+                        <h3>Linux</h3>
+                    </div>
+
+                </div>
+            </section>
+
+            <!-- Language Section -->
+            <section id="languages" class="language">
+                <div class="language-card">
+                    <img src="img/en-todo-el-mundo.png" alt="">
+                    <div>
+                        <h3>Idiomas</h3>
+                        <p>Español - Nativo</p>
+                        <p>Inglés - Profesional</p>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="home" class="hero">
+                <h1>Contacto</h1>
+                <div class="contact-info">
+                    <p>📧 sebastianarce482@gmail.com</p>
+                    <p>📱 +57 312 247 7439</p>
+                    <p>🔗 <a href="https://www.linkedin.com/in/sebastian-arce29/" target="_blank">LinkedIn</a></p>
+                </div>
+            </section>
+
+
+
+        </main>
+
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://github.com/sarce22" target="_blank">
+                        <img src="img/github.png" alt="GitHub" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/sebastian-arce29/" target="_blank">
+                        <img src="img/linkedin.png" alt="LinkedIn" />
+                    </a>
+                </div>
+                <p>© 2025 - Desarrollador de software</p>
+            </div>
+        </footer>
+
+    </div>
+
+
+    <script>
+        // Sidebar toggle
+        const toggleSidebarBtn = document.getElementById('toggleSidebar');
+        const sidebar = document.querySelector('.sidebar');
+
+        toggleSidebarBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('open');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!sidebar.contains(e.target) && !toggleSidebarBtn.contains(e.target)) {
+                sidebar.classList.remove('open');
+            }
+        });
+
+        // Theme toggle
+        const toggleThemeBtn = document.getElementById("toggleTheme");
+
+        // Cargar modo guardado (si hay)
+        if (localStorage.getItem("theme") === "dark") {
+            document.body.classList.add("dark-mode");
+            toggleThemeBtn.textContent = "☀️";
+        }
+
+        toggleThemeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            if (document.body.classList.contains("dark-mode")) {
+                toggleThemeBtn.textContent = "☀️";
+                localStorage.setItem("theme", "dark");
+            } else {
+                toggleThemeBtn.textContent = "🌙";
+                localStorage.setItem("theme", "light");
+            }
+        });
+
+    </script>
+
+</body>
+
+</html>
+</body>
+
+</html>
