@@ -717,3 +717,37 @@ body.dark-mode footer {
   margin-bottom: 1.5rem;
 }
 
+/* Estilo para el grupo de elementos a la derecha */
+.right-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap; /* Permite que en móviles se acomode en varias líneas si es necesario */
+}
+
+/* Estilo para el selector */
+.language-selector select {
+  padding: 6px 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: var(--bg-color, white);
+  color: var(--text-color, black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+  .right-controls {
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .language-selector select {
+    font-size: 0.9rem;
+    padding: 5px 8px;
+  }
+}

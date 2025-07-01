@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "description": "Software Engineering student (final semester). Strong knowledge of web technologies, application development, and database management. I’m a serious, committed, and responsible person, with solid communication skills and a high level of English (C1 certified). I’m passionate about learning and taking on new challenges that help me grow professionally.",
+        "download": "Download CV"
+    },
+    "technologies": {
+        "title": "Technologies"
+    },
+    "aboutme": {
+        "title": "About Me"
+    },
+    "contact": {
+        "card-title": "Contact"
+    },
+    "language": {
+        "title": "Languages"
+    },
+    "idioma": "Languages",
+    "espanol-nativo": "Spanish - Native",
+    "ingles-pro": "English - Professional (C1)"
+}

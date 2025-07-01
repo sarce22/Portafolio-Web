@@ -1,0 +1,21 @@
+{
+    "hero": {
+        "description": "Estudiante de Ingeniería de Software (último semestre). Amplios conocimientos en tecnologías para entornos web, desarrollo de aplicaciones y gestión de bases de datos. Soy una persona seria, comprometida y responsable, con habilidades sólidas de comunicación y un nivel alto de inglés (Certificado C1). Me apasiona aprender y asumir nuevos desafíos que me permitan seguir creciendo profesionalmente.",
+        "download": "Descargar CV"
+    },
+    "technologies": {
+        "title": "Tecnologías"
+    },
+    "aboutme": {
+        "title": "Sobre mí"
+    },
+    "contact": {
+        "card-title": "Contacto"
+    },
+    "language": {
+        "title": "Idiomas"
+    },
+    "idioma": "Idiomas",
+    "espanol-nativo": "Español - Nativo",
+    "ingles-pro": "Inglés - Profesional (C1)"
+}
